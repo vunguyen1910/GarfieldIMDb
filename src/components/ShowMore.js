@@ -1,9 +1,12 @@
 import React from 'react'
 
-export default function ShowMore() {
+export default function ShowMore(props) {
     return (
-        <div>
-            
-        </div>
+        <>
+            <button onClick={() => {
+    
+        props.getFirstPage();
+            }}>Show more</button>
+        </>
     )
 }
