@@ -13,20 +13,26 @@ export default function NaviBar(props) {
 
     return (
         <div className="container navi-container">
+        <h3>Want to custom what you see?</h3>
             <input id="movieSearch" placeholder="Search your movies here..." onChange={event => {
                 console.log(event.target.value)
                 props.setName(event.target.value)
             }} />
-            <div className="slider">
-              <Slider
-                axis="x"
-                x = {props.rating}
-                xmax = {10}
-                xmin = {0}
-                xstep = {0.5}
-                onChange = {event => props.setRating(event.x)}
-                valuelabeldisplay="auto"
-              />
+            <div className="sliders">
+              <div className="rating-slide">
+                <span>Rating</span>
+                <Slider
+                  id="rating-slide"
+                  axis="x"
+                  x = {props.rating}
+                  xmax = {10}
+                  xmin = {0}
+                  xstep = {1}
+                  onChange = {event => props.setRating(event.x)}
+                  valuelabeldisplay="auto"
+                />
+                <span id="rating-scope">{props.rating}</span>
+              </div>
             </div>
 
 

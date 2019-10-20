@@ -39,7 +39,7 @@ const Genres = {
   10766: "Soap",
   10767: "Talk",
   10768: "War & Politics",
-  37: "Western"  
+  37: "Western"
 };
 
 
@@ -57,6 +57,7 @@ export default function MoviesShowup(props) {
         return (
           <Card  key={movie.id}>
             <Card.Img
+              className="cards"
               variant="top"
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path && movie.poster_path}`}
               alt="This API is suck"
@@ -84,10 +85,6 @@ export default function MoviesShowup(props) {
           </Card>
         );
       })}
-      <ShowMore
-        getFirstPage = {props.getFirstPage}
-       />
     </div>
   );
 }
-

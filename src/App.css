@@ -15,6 +15,7 @@
   width: 15rem;
   margin: 9px;
   border-radius: 30px !important;
+  
 }
 
 .card-img-overlay{
@@ -32,12 +33,15 @@
   flex-direction: column;
   justify-content: flex-start;
   height: 68%;
+  animation-name: slideDown;
+	-webkit-animation-name: slideDown;
   transition-duration: 0.5s;
+	animation-duration: 0.5s;
+  background-color: rgb(1, 1,1, 0.7);
+  border-bottom-left-radius: 140px;
+  border-bottom-right-radius: 140px;
 }
 
-.card-img-top:hover{
-  color: red;
-}
 
 .carose-image{
 max-width: 100vw;
@@ -60,8 +64,13 @@ max-width: 100vw;
   margin: 2px;
 }
 
-.showmore{
-
+#showmore-button{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: white;
+  border: 2px solid lightgrey;
+  padding: 7px;
+  border-radius: 30px;
 }
 
 .navi-container{
@@ -82,4 +91,37 @@ max-width: 100vw;
   width: 50vw;
   border-radius: 40px;
   border: 2px solid lightgrey;
+}
+
+.rating-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#rating-slide{
+  margin-left: 20px;
+}
+#rating-scope{
+  padding: 10px;
+}
+
+.main-container{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-50%);
+	}
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+		transform: translateY(-50%);
+	}
 }

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import ControlledCarousel from "./CaroselModule"
 import MoviesShowup from "./MoviesShowup"
 import NaviBar from "./NaviBar"
+import ShowMore from "./ShowMore"
 
 export default function MainPage(props) {
     //FILTER OPTIONALS
@@ -12,7 +13,7 @@ export default function MainPage(props) {
     function moviesFilter(moviesList, name, year, rating){
         if(!!name){
           moviesList = moviesList.filter(movie => movie.original_title.includes(name) ? true : false )
-        }else if(!!rating){
+        }if(!!rating){
           console.log(rating)
           moviesList = moviesList.filter(movie => Number(movie.vote_average)>=rating ? true: false)
         }
@@ -21,7 +22,7 @@ export default function MainPage(props) {
     }
 
     return (
-        <div>
+        <div className="container-fluid main-container">
             <ControlledCarousel />
             <NaviBar
             setName = {setName}
@@ -32,6 +33,9 @@ export default function MainPage(props) {
             movieList={moviesFilter(props.movieList, name, year, rating)}
             getFirstPage = {props.getFirstPage}
             />
+            <ShowMore
+              getFirstPage = {props.getFirstPage}
+             />
         </div>
     )
 }
