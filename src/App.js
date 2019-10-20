@@ -25,6 +25,7 @@ export default function App() {
   if (isLoading) return <Loading />;
   return (
     <MainPage
+      setmainMovieList = {setmainMovieList}
       movieList={mainMovieList}
       getFirstPage={getFirstPage}
     />
