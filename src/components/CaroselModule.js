@@ -21,7 +21,7 @@ export default function CaroselModule() {
     />
     <Carousel.Caption>
       <h3>Movie of the Year</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <p>A movie that borders on genius-repellant, dark, terrifying, disgusting, brilliant and unforgettable.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -33,7 +33,7 @@ export default function CaroselModule() {
 
     <Carousel.Caption>
       <h3>Movie of the Year</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>If there is a meaningful difference between performing and acting, Joaquin Phoenix surely exemplifies the former here, creepily contorting as the Clown Prince of Crime in Todd Phillips' timely, toxic take on the Making of a Murdering Madman.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -45,7 +45,7 @@ export default function CaroselModule() {
 
     <Carousel.Caption>
       <h3>Movie of the Year</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <p>If you're feeling insufficiently anxious in your life, "Joker" could be just the ticket. If not, look elsewhere to be entertained.</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
